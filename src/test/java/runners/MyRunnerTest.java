@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 @Test
 @CucumberOptions(
-        features = "src/test/features",
+        features = "src/test/resources/features",
         plugin = {
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
                 "progress",
@@ -14,5 +14,5 @@ import org.testng.annotations.Test;
         },
         glue = "stepdefinitions"
 )
-public class MyRunner extends AbstractTestNGCucumberTests {
+public class MyRunnerTest extends AbstractTestNGCucumberTests {
 }
