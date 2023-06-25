@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 @CucumberOptions(
         features = "src/test/features",
         plugin = {
-                "io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm",
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
                 "progress",
                 "summary"
         },
