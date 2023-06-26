@@ -11,6 +11,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import pages.HomePage;
 import pages.ResultPage;
 
@@ -27,7 +28,11 @@ public class BingSteps {
 
     @Given("User is on bing.com webpage")
     public void userIsOnBingComWebpage() {
-        driver = new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
+
+        driver = new ChromeDriver(chromeOptions);
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
         driver.get("https://www.bing.com");
