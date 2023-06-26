@@ -28,10 +28,7 @@ public class BingSteps {
 
     @Given("User is on bing.com webpage")
     public void userIsOnBingComWebpage() {
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--headless");
-
-        driver = new ChromeDriver(chromeOptions);
+        driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
